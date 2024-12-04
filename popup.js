@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const showRegister = document.getElementById('showRegister');
     const cancelEdit = document.getElementById('cancelEdit');
     const showLogin = document.getElementById('showLogin');
+    const showLogin2 = document.getElementById('showLogin2');
     const showDataForm = document.getElementById('showDataForm');
     const showDashboard = document.getElementById('showDashboard');
     const institucionTipo = document.getElementById('institucionTipo');
@@ -1104,6 +1105,7 @@ async function handleObligacionesToggle(event) {
     // Mostrar secciones correspondientes
     showRegister.addEventListener('click', () => showSection(registerForm));
     showLogin.addEventListener('click', () => showSection(loginForm));
+    showLogin2.addEventListener('click', () => showSection(loginForm));
     showDataForm.addEventListener('click', () => showSection(dataForm));
     showDashboard.addEventListener('click', () => {
         showSection(dashboard);
