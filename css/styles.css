@@ -1,0 +1,525 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    padding: 5;
+    width: 600px;
+    
+
+}
+h1 {
+    color: #f05627; /* Naranja */
+    text-align: center;
+}
+
+.form-container {
+    display: none;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 20px auto;
+
+
+    box-sizing: border-box;
+    border-radius: 30px;
+    background: #fefefe;
+    box-shadow: 15px 15px 30px rgb(60, 60, 60) ,
+                -15px -15px 30px  #A9A9A9;
+}
+
+.form-container.active {
+    display: block;
+}
+
+input[disabled] {
+    background-color: #f5f5f5; /* Color de fondo para indicar que está deshabilitado */
+    color: #aaa;              /* Texto más tenue */
+    border: 1px solid #ccc;   /* Borde tenue */
+    cursor: not-allowed;      /* Cursor para indicar que no es editable */
+}
+
+
+
+input, select, button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+input:focus, select:focus, button:focus {
+    outline: none;
+    border-color: #00848e; /* Cyan */
+}
+
+/* button {
+    background-color: #f05627; 
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+} */
+
+/*button:hover {
+    background-color: #e04d21; 
+} */
+
+/* Estilo base para los botones */
+button {
+    padding: 5px 10px; /* Ajuste para mayor equilibrio */
+    margin-right: 5px;
+    border: none;
+    border-radius: 8px; /* Bordes más suaves */
+    background-color: #007BFF; /* Azul predeterminado */
+    color: white;
+    font-size: 10px; /* Tamaño de texto ajustado */
+    font-weight: bold; /* Texto más visible */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* Suavizar todas las transiciones */
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+
+button i {
+    margin-right: 6px; 
+    font-size: 8px; 
+}
+
+
+button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15); 
+    transform: translateY(-2px); 
+}
+
+
+button.edit-btn {
+    background-color: #28a745; /* Verde */
+}
+
+button.edit-btn:hover {
+    background-color: #218838; 
+}
+
+
+button.delete-btn {
+    background-color: #dc3545; 
+}
+
+button.delete-btn:hover {
+    background-color: #c82333; 
+}
+
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.link {
+    color: #00848e;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.link:hover {
+    color: #f05627; /* Naranja */
+}
+
+
+/* Animaciones para el logo */
+.animated-logo {
+    width: 100px;
+    animation: float 4s ease-in-out infinite;
+    transition: transform 0.3s ease;
+}
+
+.animated-logo:hover {
+    transform: scale(1.1) rotate(10deg);
+}
+
+/* Animación de "flotar" */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+
+/* Estilos para el logo */
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-container img {
+    width: 120px; /* Ajusta el tamaño del logo */
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #f4f4f4;
+    color: #888;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-section h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #00b7c3;
+}
+
+.footer-section p, .footer-section ul, .footer-section a {
+    margin: 5px 0;
+    color: #888;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons a img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
+
+.social-icons a img:hover {
+    filter: brightness(1) invert(0);
+}
+
+.scrollable-table-container {
+    max-height: 200px;
+    overflow-y: auto; 
+    overflow-x: hidden;  
+    border: 1px solid #ddd; 
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+
+th {
+    background-color: #f05627; /* Naranja */
+    color: white;
+    position: sticky;
+    top: 0;  /* Hace que se mantenga fijo al hacer scroll */
+    z-index: 1;  
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+/* Estilos para el contenedor de botones */
+.button-container {
+    display: flex;
+    justify-content: center; /* Centra los botones */
+    gap: 5px;
+    align-items: center;
+}
+
+/* Estilos para los botones principales */
+.button-container button {
+    background-color: #0870A2; 
+    color: white;
+    border: none; 
+    padding: 5px 8px; 
+    border-radius: 4px;
+    cursor: pointer; 
+    font-size: 11px; 
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+/* Estilos para el botón de eliminar */
+.button-container button.delete-btn {
+    background-color: #f05627; /* Rojo */
+}
+
+.button-container button:hover {
+    background-color: #065f81; 
+    transform: translateY(-2px); 
+}
+
+/* Estilos para el botón de eliminar en hover */
+.button-container button.delete-btn:hover {
+    background-color: #d84a14; /* Rojo más oscuro */
+}
+
+/* Estilos para el dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    background-color: #0870A2; /* Azul de fondo */
+    color: white;
+    padding: 5px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 11px;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    min-width: 120px;
+    z-index: 1000;
+}
+
+.dropdown-menu button {
+    background-color: transparent;
+    color: #333;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.dropdown-menu button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Mostrar el dropdown cuando se hace clic */
+.dropdown.open .dropdown-menu {
+    display: block;
+}
+
+
+.obligaciones-checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 40px;
+    height: 20px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.obligaciones-checkbox-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 40px;
+    height: 20px;
+}
+
+td {
+    text-align: center;
+}
+
+/* Estilo del checkbox */
+.obligaciones-checkbox {
+    -webkit-appearance: none;  
+    appearance: none;
+    width: 30px;
+    height: 16px;
+    background-color: #ddd; 
+    border-radius: 50px;
+    position: relative;
+    transition: background-color 0.3s ease; 
+    cursor: pointer;
+}
+
+
+.obligaciones-checkbox::before {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 1px;
+    left: 1px;
+    transition: transform 0.3s ease; 
+}
+
+
+.obligaciones-checkbox:checked {
+    background-color: #0870A2; 
+}
+
+.obligaciones-checkbox:checked::before {
+    transform: translateX(14px); 
+}
+
+
+.obligaciones-checkbox:hover {
+    background-color: #bbb; 
+}
+
+
+#message {
+    position: fixed;
+    top: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 5px;
+    display: none; 
+    z-index: 1000; 
+}
+
+#message.success {
+    color: #3c763d;
+    background-color: #dff0d8;
+}
+
+#message.error {
+    background-color: #f2dede;
+    color: #a94442;
+    display: block;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    background-color: #0073b7;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-menu button {
+    color: black;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+}
+
+.dropdown-menu button:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 10px 15px; 
+    padding-right: 0px; 
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+    color: #4CAF50;
+    pointer-events: none; 
+}
+
+#searchInput:focus {
+    border-color: #4CAF50; 
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); 
+    outline: none;
+}
+
+.search-container:hover .search-icon {
+    color: #388E3C; 
+}
