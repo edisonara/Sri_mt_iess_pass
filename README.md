@@ -7,7 +7,6 @@
 - **Inicio de sesión automatizado**: Permite iniciar sesión rápidamente en varias instituciones sin necesidad de introducir manualmente las credenciales cada vez.
 - **Manejo de múltiples instituciones**: Compatible con varias plataformas como el SRI y el IESS.
 - **Gestión de sesiones**: Mantiene la sesión activa mientras el navegador está abierto y realiza un cierre de sesión automático al cerrar la ventana.
-- **Escaneo de páginas web**: Recupera información específica después del inicio de sesión para facilitar la gestión de datos.
 
 ## 🛠️ Instalación
 
