@@ -42,7 +42,7 @@ Compatibilidad: Esta extensión está diseñada específicamente para Chrome y p
 Si tienes sugerencias, encuentras un error o quieres mejorar la funcionalidad, no dudes en abrir un issue o enviar un pull request.
 
 ## 📝 Licencia
-Este proyecto está bajo la licencia MIT. Consulta el archivo LICENSE para más detalles.
+Este proyecto está bajo la licencia MIT. Consulta el archivo `LICENCE` para más detalles.
 ## Desarrollado con ❤️ por edisonara
 Este `README.md` está completo y bien estructurado para que los usuarios entiendan claramente cómo funciona la extensión y cómo instalarla. ¡Espero que sea útil! 😊
 
